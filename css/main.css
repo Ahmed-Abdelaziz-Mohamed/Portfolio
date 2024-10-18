@@ -1,0 +1,633 @@
+/* Starting of General Rules */
+
+ul {list-style-type: none; margin: 0; padding: 0;}
+li {margin: 0; padding: 0;}
+a {text-decoration: none;}
+/* Ending of General Rules */
+
+/* Starting of NavBar */
+
+.navbar-toggler:active , .navbar-toggler:focus { box-shadow: none;}
+
+.navbar {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    transition: all 0.5s;
+}
+
+
+@media (max-width: 760px) {
+    .navbar ul{
+        background-color: white;
+    }
+    .navbar ul li a{
+        color: black !important;
+    }
+}
+
+.navbar .container-fluid .navbar-brand {
+    font: 800 18px Montserrat, sans-serif;
+    letter-spacing: 1px;
+}
+
+
+.navbar .container ul.navbar-nav li a{
+    color: black;
+    font-size: 0.90rem;
+    padding: 0.75rem;
+}
+
+#navbarSupportedContent > ul > li > a.active {
+    position: relative;
+    overflow: hidden;
+}
+
+
+#navbarSupportedContent > ul > li > a.active::after {
+    content: "";
+    width: 85%;
+    height: 1px;
+    border: 1px solid white;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    animation: underline-full 0.8s;
+}
+
+@keyframes underline-full {
+    0% {width: 0%;}
+    100% {width: 85%;}
+}
+
+
+@media (max-width: 760px) {
+    #navbarSupportedContent > ul > li > a.active::after {
+        content: "";
+        width: 13%;
+        height: 1px;
+        border: 1px solid black;
+        position: absolute;
+        bottom: 0;
+        left: 44%;
+        animation: underline-mobile 0.8s;
+    }
+    
+    
+    @keyframes underline-mobile {
+        0% {width: 0%;}
+        100% {width: 13%;}
+    }
+}
+
+
+/* Ending of NavBar */
+
+
+/* Starting of MainHeader */
+
+header.main-header {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header.main-header .author {
+    font: 800 18px Montserrat, sans-serif;
+    transform: translateY(18%);
+}
+
+header.main-header .author h5 {
+    font-size: 3rem;
+}
+header.main-header .author h1 .text-animation {
+    height: 35%;
+    overflow: hidden;
+    
+}
+header.main-header .author h1 .text-animation p {
+   border-right: 2px solid;
+   width: 100%;
+   position: relative;
+   bottom: 0px;
+   white-space: nowrap;
+   overflow: hidden;
+   animation: typing 2s infinite, moving 6s steps(3) infinite;
+}
+@keyframes moving {
+    0% {bottom: 0;}
+    100% {bottom: 265%;}
+    
+}
+
+@keyframes typing {
+    0% {width: 0;}
+    50% {width: 100%;}
+    100% {width: 0%;}
+}
+header.main-header .author .social-contacts {
+    transform: translateY(-100px);
+    
+}
+header.main-header .author .social-contacts i{
+    font-size: 0.9rem;
+    height: 35px;
+    width: 35px;
+    padding-top: 10px;
+    vertical-align:middle;
+    cursor: pointer;
+}
+/* Ending of MainHeader */
+
+
+/* Starting of About */
+.about .about-photo {
+    position: relative;
+}
+.about .about-photo::after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 0px;
+    bottom: -30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.about .about-me h3{
+    font: 800 30px Montserrat, sans-serif;
+    color: #343434;
+}
+
+.about .about-me p {
+    font: 400 15px Poppins, sans-serif;
+}
+
+
+.about .about-me .skills .progress {
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+    height: 25px;
+    
+}
+.about .about-me .skills .progress-bar {
+    background-color: #1C1C1C;
+    animation: progress 7s;
+    
+}
+
+@keyframes progress {
+    0% {width:30%;}
+}
+
+.about .about-me .about-buttons .btn-1{
+    background-color: black;
+    color: white;
+    font-size: 0.8rem;
+    transition: all 0.4s;
+}
+
+.about .about-me .about-buttons .btn-1:hover {
+    background-color: white;
+    color: black; 
+    outline: 1px solid black;
+}
+
+.about .about-me .about-buttons .btn-2{
+    background-color: white;
+    color: black;
+    font-size: 0.8rem;
+    outline: 1px solid black;
+    transition: all 0.4s;
+}
+
+.about .about-me .about-buttons .btn-2:hover {
+    background-color: black;
+    color: white; 
+    
+}
+
+/* Ending of About */
+
+/* Starting of Services */
+.services {
+    background-color: white;
+}
+.services header h3 {
+    font: 900 40px Montserrat, sans-serif;
+    position: relative;
+    display: inline-block;
+    z-index: 4;
+}
+
+.services header h3::after {
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+
+.services .container .item span {
+    background-color: #F7F7F7;
+    width: 70px;
+    height: 70px;
+    padding-top: 23px;
+    transition: all 0.4s;
+}
+
+.services .container .item:hover span {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.services .container .item h6 {
+    font: 800 18px Montserrat, sans-serif;
+}
+
+/* Ending of Services */
+
+/* Starting of Portfolio */
+
+.portfolio {
+    background-color: white;
+}
+.portfolio header h3 {
+    font: 900 40px Montserrat, sans-serif;
+    position: relative;
+    display: inline-block;
+    z-index: 4;
+}
+
+.portfolio header h3::after {
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+
+.portfolio .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active::after {
+    content: "";
+    width: 70%;
+    height: 1px;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    animation: underline 0.5s;
+}
+
+@keyframes underline {
+    0% {width: 0%;}
+    100% {width: 70%;}
+}
+
+.portfolio .nav-link {
+    font: 700 16px Poppins, sans-serif;
+    color: black;
+}
+
+
+.portfolio .container .portfolio-item .portfolio-photo {
+    position: relative;
+}
+
+.portfolio .container .portfolio-item .portfolio-photo .portfolio-item-buttons {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    bottom: 2%;
+    left: 2%;
+    background-color: rgba(255, 255, 255,0);
+    transition: all 0.4s;
+}
+.portfolio .container .portfolio-item .portfolio-photo .portfolio-item-buttons:hover {
+    background-color: rgba(255, 255, 255,1);
+}
+
+.portfolio .container .portfolio-item .portfolio-photo .portfolio-item-buttons h6{
+    font: 700 12px Montserrat, sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    transition: all 0.4s;
+    color: rgba(0, 0, 0, 0);
+}
+.portfolio .container .portfolio-item .portfolio-photo .portfolio-item-buttons:hover h6 {
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.portfolio .container .portfolio-item .portfolio-photo .portfolio-item-buttons .portfolio-buttons button {
+   color: rgba(0, 0, 0, 0);
+   background-color: rgba(0, 0, 0, 0);
+   
+}
+
+.portfolio .container .portfolio-item .portfolio-photo .portfolio-item-buttons:hover .portfolio-buttons button {
+   color: rgba(255, 255, 255, 1);
+   background-color: rgba(0, 0, 0, 1);
+}
+
+.portfolio .container .portfolio-item .portfolio-photo .portfolio-item-buttons:hover .portfolio-buttons button:hover {
+   color: black;
+   background-color: white;
+   outline: 1px solid black;
+}
+
+
+.portfolio .container .protfolio-gallery .offcanvas {
+    position: absolute;
+    width: 500px;
+    left: 30%;
+    bottom: -500%;
+    overflow: visible;
+}
+
+.protfolio-gallery .offcanvas .offcanvas-header {
+    color: black;
+    position: absolute;
+    right: -3%;
+    top: -12%;
+}
+
+.protfolio-gallery .offcanvas .offcanvas-body .carousel-item {
+    position: relative;
+    overflow: visible;
+}
+
+.protfolio-gallery .offcanvas .offcanvas-body .carousel-item img {
+    position: relative;
+    overflow: visible;
+}
+.protfolio-gallery .offcanvas .offcanvas-body .carousel-item p {
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+}
+
+#carouselExample-2 > button.carousel-control-next > span.carousel-control-next-icon {
+    background-color: #1C1C1C;
+}
+#carouselExample-2 > button.carousel-control-prev > span.carousel-control-prev-icon {
+    background-color: #1C1C1C;
+}
+
+
+/* Ending of Portfolio */
+
+/* Starting of Portfolio */
+
+.testimonials {
+    background-color: #F7F7F7;
+}
+.testimonials header h3 {
+    font: 900 40px Montserrat, sans-serif;
+    position: relative;
+    display: inline-block;
+    z-index: 4;
+}
+
+.testimonials header h3::after {
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+
+.testimonials .container .carousel-inner .testimonial-photo{
+    width: 100px;
+    margin: 3rem auto;
+}
+
+
+
+#carouselExampleIndicators > div.carousel-indicators {
+    bottom: -50px;
+    
+}
+
+#carouselExampleIndicators > div.carousel-indicators > button {
+    background-color:  #869791;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    
+}
+
+/* Ending of Portfolio */
+
+/* Starting of Data */
+
+.data .data-item h3 {
+    font: 900 30px Montserrat, sans-serif;
+    color: rgb(52, 52, 52);
+}
+
+.data .data-item p {
+    font: 600 15px Poppins, sans-serif;
+    color: rgb(116, 129, 130);
+}
+/* Ending of Data */
+
+
+/* Starting of Team */
+.team {
+    background-color: #F7F7F7;
+}
+.team header h3 {
+    font: 900 40px Montserrat, sans-serif;
+    position: relative;
+    display: inline-block;
+    z-index: 4;
+}
+
+.team header h3::after {
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+
+.team .container .team-item .member {
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.team .container .team-item .member img {
+    transition: all 0.6s;
+}
+
+.team .container .team-item .member:hover img {
+    transform: scale(1.2 , 1.2);
+    
+}
+
+.team .container .team-item .member .member-contact {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    bottom: 2%;
+    left: 2%;
+    background-color: rgb(255, 255, 255, 0);
+    transform: rotateY(180deg) scale(0.5, 0.5);
+    transition: all 0.6s;
+}
+
+.team .container .team-item .member:hover .member-contact {
+    transform: rotateY(0deg) scale(1 , 1);
+    background-color: rgb(255, 255, 255, 1);
+}
+
+.team .container .team-item .member .member-contact ul {
+    position: absolute;
+    top: 45%;
+    left: 18%;
+}
+
+.team .container .team-item .member .member-contact ul li a {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255, 0);
+    border-radius: 50%;
+    padding: 10px 15px;
+    
+}
+.team .container .team-item .member:hover .member-contact ul li a {
+    background-color: rgba(0, 0, 0, 1);
+    color: rgb(255, 255, 255, 1);
+    
+}
+.team .container .team-item .member .member-contact ul li a:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 10px 15px; 
+}
+.team .container .team-item .member-description {
+    background-color: #5B5B5B;
+}
+
+.team .container .team-item .member-description h4{
+    font: 500 25px Montserrat, sans-serif;
+}
+
+.team .container .team-item .member-description h5{
+    font: 700 20px Montserrat, sans-serif;
+}
+/* Ending of Team */
+
+
+
+/* Starting of Team */
+
+.contact {
+    background-color: #F7F7F7;
+}
+.contact header h3 {
+    font: 900 40px Montserrat, sans-serif;
+    position: relative;
+    display: inline-block;
+    z-index: 4;
+}
+
+.contact header h3::after {
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+
+
+/* Ending of Team */
+
+/* Starting of Contact */
+
+.contact .container .data-item i {
+    background-color: #F7F7F7;
+    width: 70px;
+    height: 70px;
+    padding-top: 18px;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+.contact .container .data-item:hover i {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    
+}
+
+.contact .container .data-item h3 {
+    font: 600 18px Montserrat, sans-serif;
+}
+
+.contact .container .contact-form form input {
+    cursor: auto;
+}
+.contact .container .contact-form form textarea {
+    cursor: auto;
+}
+
+
+.contact .container .contact-form .form-button button{
+    background-color: black;
+    color: white;
+}
+
+.contact .container .contact-form .form-button button:hover {
+    background-color: white;
+    color: black;
+
+}
+/* Ending of Contact */
+
+
+/* Starting of Footer */
+
+footer {
+    background-color: #1C1C1C;
+    
+}
+
+footer p {
+    font: 400 13px Poppins, sans-serif;
+    color: #748182;
+}
+
+/* Ending of Footer */
